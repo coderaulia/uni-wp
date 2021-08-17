@@ -34,6 +34,36 @@
       }   
    ?>
 
+   <?php 
+
+   $array = get_pages(array(
+      'child_of' => get_the_ID()
+   ));
+      if($parent OR $array){
+   ?>
+
+   <div class="page-links">
+      <h2 class="page-links__title"><a
+            href="<?php echo get_permalink($parent); ?>"><?php echo get_the_title($parent); ?></a></h2>
+      <ul class="min-list">
+         <?php 
+            if($parent){
+               $findChildOf = $parent;
+            } else {
+               $findChildOf = get_the_ID();
+            }
+
+            wp_list_pages(array(
+               'title_li' => NULL,
+               'child_of' => $findChildOf,
+               'sort_column' => 'menu_order'
+            ));
+         ?>
+      </ul>
+   </div>
+
+   <?php } ?>
+
    <div class="generic-content">
       <?php
       // wordpress dynamic content
