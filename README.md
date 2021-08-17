@@ -8,4 +8,5 @@ Hi! It's my first time tryin to build a Wordpress Theme! I know it would be a lo
 -  [x] On Style.css you need to define theme name, author, and the version on the top of the file.
 -  [x] Single.php for single post page. And Page.php for single page type content. It depends on the URL from the index page.
 -  [x] Header.php and Footer.php it allows you to make a dynamic header and footer. And also get all css file, and black admin panel bar at the top.
--  [x] Functions.php. Create/call all Wordpress functionality
+-  [x] Functions.php. Create/call all Wordpress functionality, call CSS and JS files. We need to use get_theme_uri to call the theme directory to working with CSS, JS, or images. ex: `<?php echo get_theme_file_uri('/images/ocean.jpg') ?>`. Also we can call the dynamic wordpress title tag here: `add_theme_support('title-tag');`.
+-  [x] Page.php. We can call the page title (`<?php the_title(); ?>`) and page content (`the_content(); ?>`).
