@@ -13,9 +13,6 @@ add_action('wp_enqueue_scripts', 'university_files');
 
 // call the dynamic wordpress title tag
 function university_features() {
-  register_nav_menu('headerMenu', 'Header Menu Location');
-  register_nav_menu('footerMenuOne', 'Footer Menu One');
-  register_nav_menu('footerMenuTwo', 'Footer Menu Two');
   add_theme_support('title-tag');
 }
 
