@@ -34,6 +34,8 @@ get_header();
    </div>
    <?php
       }
+      // showing pagination
+      echo paginate_links();
    ?>
 </div>
 
