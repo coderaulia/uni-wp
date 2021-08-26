@@ -49,9 +49,9 @@
          <?php 
 
             $homePost = new WP_Query(array(
-               'post_per_page' => 2
+               'posts_per_page' => 2
             ));
-            while($homePost->have_posts(  )){
+            while($homePost->have_posts()){
                $homePost->the_post();
          ?>
          <div class="event-summary">
