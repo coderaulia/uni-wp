@@ -10,3 +10,10 @@ Hi! It's my first time tryin to build a Wordpress Theme! I know it would be a lo
 -  [x] Header.php and Footer.php it allows you to make a dynamic header and footer. And also get all css file, and black admin panel bar at the top.
 -  [x] Functions.php. Create/call all Wordpress functionality, call CSS and JS files. We need to use get_theme_uri to call the theme directory to working with CSS, JS, or images. ex: `<?php echo get_theme_file_uri('/images/ocean.jpg') ?>`. Also we can call the dynamic wordpress title tag here: `add_theme_support('title-tag');`.
 -  [x] Page.php. We can call the page title (`<?php the_title(); ?>`) and page content (`the_content(); ?>`).
+-  [x] Front-page.php. Custom front page file.
+
+## Custom Post Types
+
+-  [x] Create a function and add an action to functions.php.
+-  [x] Setting all needed parameter to the post types (names, icons etc).
+-  [x] Adding "Must use Plugin", to force using the post types. You can create a new folder on wp-content (mu_plugins).
