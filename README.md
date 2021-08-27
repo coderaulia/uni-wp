@@ -18,5 +18,6 @@ Hi! It's my first time tryin to build a Wordpress Theme! I know it would be a lo
 -  [x] Setting all needed parameter to the post types (names, icons etc).
 -  [x] Adding "Must use Plugin", to force using the post types. You can create a new folder on wp-content (mu_plugins).
 -  [x] Adding new single-{custom post types name}.php to register new post types. And adding archive-{custom post types name}.php to customize different post types archive.
--  [x] Adding has_archive to true.
+-  [x] Adding has_archive to true. Adding supports for editor, excerpt.
 -  [x] Don't forget to update the .htaccess via wp-admin setting permalinks.
+-  [x] Adding custom fields for events date. (using plugin: Advanced Custom Fields).
