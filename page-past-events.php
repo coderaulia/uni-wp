@@ -9,18 +9,35 @@ get_header();
       style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg') ?>);"></div>
    <div class="page-banner__content container container--narrow">
       <h1 class="page-banner__title">
-         All Events
+         Past Events
       </h1>
       <div class="page-banner__intro">
-         <p><?php the_author_description(); ?></p>
+         <p>All of our past successfull events</p>
       </div>
    </div>
 </div>
 
 <div class="container container--narrow page-section">
    <?php 
-      while(have_posts()){
-         the_post();
+
+      $today = date('Ymd');
+      $pastEvents = new WP_Query(array(
+         // pagination
+         'paged' => get_query_var('paged', 1),
+         'post_type' => 'event',
+         'meta_key' => 'event_date',
+         'orderby' => 'meta_value_num',
+         'order' => 'ASC',
+         'meta_query' => array(
+            'key' => 'event_date',
+            'compare' => '<',
+            'value' => $today,
+            'type' => 'numeric'
+         )
+      ));
+
+      while($pastEvents->have_posts()){
+         $pastEvents->the_post();
    ?>
    <div class="event-summary">
       <a class="event-summary__date t-center" href="<?php the_permalink(); ?>">
@@ -39,11 +56,10 @@ get_header();
    <?php
       }
       // showing pagination
-      echo paginate_links();
+      echo paginate_links(array(
+         'total' => $pastEvents->max_num_pages
+      ));
    ?>
-   <hr class="section-break">
-   <p>Looking for our successful past events? <a href="<?php echo site_url('/past-events'); ?>">Check out our archive
-         here</a></p>
 </div>
 
 <?php
