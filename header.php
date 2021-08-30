@@ -22,7 +22,8 @@
               <li <?php if(is_page('about-us') OR wp_get_post_parent_id(0) == 10) echo "class='current-menu-item'"; ?>>
                 <a href="<?php echo site_url('/about-us'); ?>">About
                   Us</a></li>
-              <li><a href="#">Programs</a></li>
+              <li <?php if(get_post_type() == 'program') echo 'class="current-menu-item"'; ?>><a
+                  href="<?php echo site_url('/programs'); ?>">Programs</a></li>
               <li
                 <?php if(get_post_type() == 'event' OR is_page('past-events') OR is_page('events')) echo "class='current-menu-item'"; ?>>
                 <a href="<?php echo site_url('/events'); ?>">Events</a></li>
