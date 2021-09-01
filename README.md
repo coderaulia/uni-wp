@@ -21,3 +21,10 @@ Hi! It's my first time tryin to build a Wordpress Theme! I know it would be a lo
 -  [x] Adding has_archive to true. Adding supports for editor, excerpt.
 -  [x] Don't forget to update the .htaccess via wp-admin setting permalinks.
 -  [x] Adding custom fields for events date. (using plugin: Advanced Custom Fields).
+
+## Reusable Section Functions
+
+-  [x] Using a function to make a reusable section on functions.php.
+-  [x] Create a new function with HTML section.
+-  [x] Create a dynamic logic on the functions.
+-  [x] Calling the function on every page needed.
