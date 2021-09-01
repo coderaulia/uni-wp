@@ -28,3 +28,9 @@ Hi! It's my first time tryin to build a Wordpress Theme! I know it would be a lo
 -  [x] Create a new function with HTML section.
 -  [x] Create a dynamic logic on the functions.
 -  [x] Calling the function on every page needed.
+
+## Reusable Parts
+
+-  [x] Using `get_template_part();` function.
+-  [x] Create a new folder named template-parts.
+-  [x] Call the file using `get_template_part('folder-name/file name')`. Or if want to make more dynamic, we can use `('folder-name/content', 'file name')`. It wil make 'dash' after the content name.
