@@ -6,19 +6,37 @@ class Search {
 		this.closeButton = $(".search-overlay__close");
 		this.searchOverlay = $(".search-overlay");
 		this.events();
+		// session to check the status of overlay
+		this.isOverlay = false;
 	}
 
 	events() {
 		this.openButton.on("click", this.openOverlay.bind(this));
 		this.closeButton.on("click", this.closeOverlay.bind(this));
+		$(document).on("keyup", this.keyPressSearch.bind(this));
+	}
+
+	// trigger the keybinding for search and close the orverlay
+	keyPressSearch(e) {
+		if (e.keyCode == 83 && this.isOverlay == false) {
+			this.openOverlay();
+		}
+		if (e.keyCode == 27 && this.isOverlay == true) {
+			this.closeOverlay();
+		}
 	}
 
 	openOverlay() {
 		this.searchOverlay.addClass("search-overlay--active");
+		$("body").addClass("body-no-scroll");
+		//adding overlay session opened
+		this.isOverlay = true;
 	}
 
 	closeOverlay() {
 		this.searchOverlay.removeClass("search-overlay--active");
+		$("body").removeClass("body-no-scroll");
+		this.isOverlay = false;
 	}
 }
 

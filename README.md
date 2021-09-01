@@ -41,3 +41,11 @@ Hi! It's my first time tryin to build a Wordpress Theme! I know it would be a lo
 -  [x] Add some dependencies that needed to your project.
 -  [x] Add some script such as build, start etc.
 -  [x] Compile your code to build folder using `npm run start` (running on background) or `npm run build`.
+
+## Creating live search module
+
+-  [x] Creating new module on `src/modules`.
+-  [x] Call the modules to `index.js` on `src` folder.
+-  [x] Adding the HTML overlay, input placeholder, button etc to `footer.php`.
+-  [x] Using Javascript/JQuery to trigger event when user click search icon, or pressed keyboard shortcut to open the search overlay. By adding some classes to HTML on footer.php via JS/Jquery.
+-  [x] Don't forget to run `npm run build` to compile JS files.
