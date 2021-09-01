@@ -34,3 +34,10 @@ Hi! It's my first time tryin to build a Wordpress Theme! I know it would be a lo
 -  [x] Using `get_template_part();` function.
 -  [x] Create a new folder named template-parts.
 -  [x] Call the file using `get_template_part('folder-name/file name')`. Or if want to make more dynamic, we can use `('folder-name/content', 'file name')`. It wil make 'dash' after the content name.
+
+## Adding Node Modules
+
+-  [x] npm init to initialize package JSON.
+-  [x] Add some dependencies that needed to your project.
+-  [x] Add some script such as build, start etc.
+-  [x] Compile your code to build folder using `npm run start` (running on background) or `npm run build`.

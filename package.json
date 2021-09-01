@@ -1,0 +1,33 @@
+{
+	"name": "univtheme",
+	"version": "1.0.0",
+	"description": "Me learning how to make wordpress theme with code",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"dev": "wp-scripts start",
+		"devFast": "wp-scripts start"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/coderaulia/uni-wp.git"
+	},
+	"keywords": [
+		"wordpress",
+		"theme"
+	],
+	"author": "Coderaulia",
+	"license": "ISC",
+	"dependencies": {
+		"@glidejs/glide": "^3.4.1",
+		"@wordpress/scripts": "*",
+		"axios": "^0.21.1",
+		"normalize.css": "8.0.1"
+	},
+	"bugs": {
+		"url": "https://github.com/coderaulia/uni-wp/issues"
+	},
+	"homepage": "https://github.com/coderaulia/uni-wp#readme"
+}
