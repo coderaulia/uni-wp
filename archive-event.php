@@ -1,21 +1,11 @@
 <?php 
 
 get_header();
-
+pageBanner(array(
+   'title' => 'All Events',
+   'subtitle' => 'All of our successful event',
+));
 ?>
-
-<div class="page-banner">
-   <div class="page-banner__bg-image"
-      style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg') ?>);"></div>
-   <div class="page-banner__content container container--narrow">
-      <h1 class="page-banner__title">
-         All Events
-      </h1>
-      <div class="page-banner__intro">
-         <p><?php the_author_description(); ?></p>
-      </div>
-   </div>
-</div>
 
 <div class="container container--narrow page-section">
    <?php 
