@@ -1,15 +1,15 @@
 <?php
 
 function pageBanner($data = NULL){
-  if(!$data['title']){
+  if(!@$data['title']){
     $data['title'] = get_the_title();
   }
   
-  if(!$data['subtitle']){
+  if(!@$data['subtitle']){
     $data['subtitle'] = get_field('page_banner_subtitle');
   }
   
-  if(!$data['photo']){
+  if(!@$data['photo']){
     if(get_field('page_baanner_background_image') AND !is_archive() AND !is_home()){
       $data['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
     } else {
